@@ -1677,6 +1677,20 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx", "sphinxcontrib-github-al
 test = ["pep440", "pre-commit", "pytest", "testpath"]
 
 [[package]]
+name = "nbstripout"
+version = "0.7.1"
+description = "Strips outputs from Jupyter and IPython notebooks"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "nbstripout-0.7.1-py2.py3-none-any.whl", hash = "sha256:dfb0688b42b02ff13925e583313fc009c87342ad13b79ae0329357749aa6ed0c"},
+    {file = "nbstripout-0.7.1.tar.gz", hash = "sha256:2aad3454dc13e356f2fc94917856bc44f2bed3add77e8ba9f3a78003074bcd84"},
+]
+
+[package.dependencies]
+nbformat = "*"
+
+[[package]]
 name = "nest-asyncio"
 version = "1.6.0"
 description = "Patch asyncio to allow nested event loops"
@@ -2927,4 +2941,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "d08261f8c0218ce9696308bbd365e28c387f4b94188b24d51f706299d9d6179f"
+content-hash = "1c86002029d94ebe6372baa3f240b80638d6c8e8bb8b93764f3524a6951fa3ca"
