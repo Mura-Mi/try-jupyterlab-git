@@ -698,6 +698,37 @@ files = [
 ]
 
 [[package]]
+name = "gitdb"
+version = "4.0.11"
+description = "Git Object Database"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "gitdb-4.0.11-py3-none-any.whl", hash = "sha256:81a3407ddd2ee8df444cbacea00e2d038e40150acfa3001696fe0dcf1d3adfa4"},
+    {file = "gitdb-4.0.11.tar.gz", hash = "sha256:bf5421126136d6d0af55bc1e7c1af1c397a34f5b7bd79e776cd3e89785c2b04b"},
+]
+
+[package.dependencies]
+smmap = ">=3.0.1,<6"
+
+[[package]]
+name = "gitpython"
+version = "3.1.42"
+description = "GitPython is a Python library used to interact with Git repositories"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "GitPython-3.1.42-py3-none-any.whl", hash = "sha256:1bf9cd7c9e7255f77778ea54359e54ac22a72a5b51288c457c881057b7bb9ecd"},
+    {file = "GitPython-3.1.42.tar.gz", hash = "sha256:2d99869e0fef71a73cbd242528105af1d6c1b108c60dfabd994bf292f76c3ceb"},
+]
+
+[package.dependencies]
+gitdb = ">=4.0.1,<5"
+
+[package.extras]
+test = ["black", "coverage[toml]", "ddt (>=1.1.1,!=1.4.3)", "mock", "mypy", "pre-commit", "pytest (>=7.3.1)", "pytest-cov", "pytest-instafail", "pytest-mock", "pytest-sugar"]
+
+[[package]]
 name = "greenlet"
 version = "3.0.3"
 description = "Lightweight in-process concurrent programming"
@@ -1139,6 +1170,23 @@ docs = ["ipykernel", "jinja2", "jupyter-client", "jupyter-server", "myst-parser"
 test = ["flaky", "ipykernel", "pre-commit", "pytest (>=7.0)", "pytest-console-scripts", "pytest-jupyter[server] (>=0.4)", "pytest-timeout", "requests"]
 
 [[package]]
+name = "jupyter-server-mathjax"
+version = "0.2.6"
+description = "MathJax resources as a Jupyter Server Extension."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "jupyter_server_mathjax-0.2.6-py3-none-any.whl", hash = "sha256:416389dde2010df46d5fbbb7adb087a5607111070af65a1445391040f2babb5e"},
+    {file = "jupyter_server_mathjax-0.2.6.tar.gz", hash = "sha256:bb1e6b6dc0686c1fe386a22b5886163db548893a99c2810c36399e9c4ca23943"},
+]
+
+[package.dependencies]
+jupyter-server = ">=1.1"
+
+[package.extras]
+test = ["jupyter-server[test]", "pytest"]
+
+[[package]]
 name = "jupyter-server-terminals"
 version = "0.5.2"
 description = "A Jupyter Server Extension Providing Terminals."
@@ -1187,6 +1235,30 @@ dev = ["build", "bump2version", "coverage", "hatch", "pre-commit", "pytest-cov",
 docs = ["jsx-lexer", "myst-parser", "pydata-sphinx-theme (>=0.13.0)", "pytest", "pytest-check-links", "pytest-jupyter", "sphinx (>=1.8,<7.3.0)", "sphinx-copybutton"]
 docs-screenshots = ["altair (==5.2.0)", "ipython (==8.16.1)", "ipywidgets (==8.1.1)", "jupyterlab-geojson (==3.4.0)", "jupyterlab-language-pack-zh-cn (==4.0.post6)", "matplotlib (==3.8.2)", "nbconvert (>=7.0.0)", "pandas (==2.2.0)", "scipy (==1.12.0)", "vega-datasets (==0.9.0)"]
 test = ["coverage", "pytest (>=7.0)", "pytest-check-links (>=0.7)", "pytest-console-scripts", "pytest-cov", "pytest-jupyter (>=0.5.3)", "pytest-timeout", "pytest-tornasync", "requests", "requests-cache", "virtualenv"]
+
+[[package]]
+name = "jupyterlab-git"
+version = "0.50.0"
+description = "A JupyterLab extension for version control using git"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "jupyterlab_git-0.50.0-py3-none-any.whl", hash = "sha256:00e399c2f828acc86ef58f2098c4d9bb2c0b52d37791dd5a56773a133e0c3da5"},
+    {file = "jupyterlab_git-0.50.0.tar.gz", hash = "sha256:09859546d390134ebb918a965c2c3fe2605feafe327cf61615be7dd90b5bdfbb"},
+]
+
+[package.dependencies]
+jupyter-server = ">=2.0.1,<3"
+nbdime = ">=4.0.1,<4.1.0"
+nbformat = "*"
+packaging = "*"
+pexpect = "*"
+traitlets = ">=5.0,<6.0"
+
+[package.extras]
+dev = ["black", "jupyterlab (>=4.0,<5.0)", "pre-commit"]
+test = ["coverage", "hybridcontents", "jupytext", "pytest", "pytest-asyncio", "pytest-cov", "pytest-jupyter[server] (>=0.6.0)"]
+ui-tests = ["jupyter-archive"]
 
 [[package]]
 name = "jupyterlab-pygments"
@@ -1556,6 +1628,32 @@ qtpng = ["pyqtwebengine (>=5.15)"]
 serve = ["tornado (>=6.1)"]
 test = ["flaky", "ipykernel", "ipywidgets (>=7.5)", "pytest"]
 webpdf = ["playwright"]
+
+[[package]]
+name = "nbdime"
+version = "4.0.1"
+description = "Diff and merge of Jupyter Notebooks"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "nbdime-4.0.1-py3-none-any.whl", hash = "sha256:82538e2b52e0834e9c07607e2dea27aceaaf7e8cf2269a4607c67ea9aa625404"},
+    {file = "nbdime-4.0.1.tar.gz", hash = "sha256:f1a760c0b00c1ba9b4945c16ce92577f393fb51d184f351b7685ba6e8502098e"},
+]
+
+[package.dependencies]
+colorama = "*"
+gitpython = "<2.1.4 || >2.1.4,<2.1.5 || >2.1.5,<2.1.6 || >2.1.6"
+jinja2 = ">=2.9"
+jupyter-server = "*"
+jupyter-server-mathjax = ">=0.2.2"
+nbformat = "*"
+pygments = "*"
+requests = "*"
+tornado = "*"
+
+[package.extras]
+docs = ["recommonmark", "sphinx", "sphinx-rtd-theme"]
+test = ["jsonschema", "jupyter-server[test]", "mock", "notebook", "pytest (>=6.0)", "pytest-cov", "pytest-timeout", "pytest-tornado", "requests", "tabulate"]
 
 [[package]]
 name = "nbformat"
@@ -2404,6 +2502,17 @@ files = [
 ]
 
 [[package]]
+name = "smmap"
+version = "5.0.1"
+description = "A pure Python implementation of a sliding window memory map manager"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "smmap-5.0.1-py3-none-any.whl", hash = "sha256:e6d8668fa5f93e706934a62d7b4db19c8d9eb8cf2adbb75ef1b675aa332b69da"},
+    {file = "smmap-5.0.1.tar.gz", hash = "sha256:dceeb6c0028fdb6734471eb07c0cd2aae706ccaecab45965ee83f11c8d3b1f62"},
+]
+
+[[package]]
 name = "sniffio"
 version = "1.3.1"
 description = "Sniff out which async library your code is running under"
@@ -2706,4 +2815,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "562430f788edba5e8e13671f5e9eef208dbd9f78640ee9e88c3af9718d44681a"
+content-hash = "f13013dffcf97f4b4eec1ebae25767f201520063a25073c09d60fd26d63287d3"
